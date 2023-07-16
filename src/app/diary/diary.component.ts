@@ -15,7 +15,7 @@ export class DiaryComponent implements OnInit {
   constructor(private diaryEntryService: DiaryEntryService, private router: Router) {}
 
   ngOnInit() {
-    this.diaryEntryInput = this.diaryEntryService.getDiaryEntires();
+    this.diaryEntryService.getDiaryEntires();
     this.diaryEntryService.diaryEntriesEmit.subscribe(diaryEntires => {
       this.diaryEntryInput = diaryEntires;
     });
